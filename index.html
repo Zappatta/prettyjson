@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zappatta's pretty stupid JSON prettifier</title>
+	<style type="text/css">
+	    textarea, pre {
+	        width:500px;
+	        height:500px;
+	        display:inline-block;
+	        vertical-align: top;
+	        border: 1px solid black;
+    		margin: 0px;
+	    }
+	    #err {
+	    	color:red;
+	    	display:none;
+	    }
+	</style>
+</head>
+<body>
+<div>Zappatta's pretty stupid JSON prettifier</div>
+<textarea  id="txtSrc"></textarea>
+<pre id="txtDst"></pre>
+<button id="btnPprettify">prettify</button>
+<div id="err">
+	invalid json
+</div>
+<script>
+    document.querySelector("#btnPprettify").addEventListener("click",function(){
+    	console.log("DSADSA")
+       let srcValue = document.querySelector("#txtSrc").value;
+       document.querySelector("#err").style.display = "none";
+       try{
+       	document.querySelector("#txtDst").innerHTML = JSON.stringify(JSON.parse(srcValue),null,"\t");
+       }
+       catch(err){
+       	document.querySelector("#err").style.display = "block";
+       }
+    });
+</script>
+</body>
+</html>
