@@ -1,4 +1,4 @@
-#Pretty stupid JSON prettifier
+# Pretty stupid JSON prettifier
 
 A tiny, vanilla JS JSON prettifier. Shows everyone can write a JSON prettifier in 5 minutes using modern Javascript.
 
